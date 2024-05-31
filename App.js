@@ -1,20 +1,27 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, View } from "react-native";
+import { View, StyleSheet, ScrollView, SafeAreaView } from "react-native";
 import Header from "./components/Header";
 import SearchBar from "./components/SearchBar";
 import Categories from "./components/Categories";
+import OngoingTask from "./components/OngoingTask";
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Header />
-      <SearchBar />
-      <Categories />
-    </View>
+    <SafeAreaView style={styles.safeArea}>
+      <View style={styles.container}>
+        <Header />
+        <SearchBar />
+        <Categories />
+        <OngoingTask />
+      </View>
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
+  safeArea: {
+    flex: 1,
+  },
   container: {
     flex: 1,
     backgroundColor: "#F7F0E8",
