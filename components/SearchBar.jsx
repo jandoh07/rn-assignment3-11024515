@@ -1,5 +1,11 @@
 import React from "react";
-import { Image, StyleSheet, TextInput, View } from "react-native";
+import {
+  Image,
+  StyleSheet,
+  TextInput,
+  TouchableOpacity,
+  View,
+} from "react-native";
 
 const SearchBar = () => {
   return (
@@ -8,7 +14,13 @@ const SearchBar = () => {
         <Image source={require("../assets/mynaui_search.png")} height={24} />
         <TextInput placeholder="Search" style={styles.input} />
       </View>
-      <Image source={require("../assets/Filter.png")} width={50} height={48} />
+      <TouchableOpacity>
+        <Image
+          source={require("../assets/Filter.png")}
+          width={50}
+          height={48}
+        />
+      </TouchableOpacity>
     </View>
   );
 };

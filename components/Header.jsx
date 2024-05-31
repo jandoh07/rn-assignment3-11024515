@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, Image, View, Text } from "react-native";
+import { StyleSheet, Image, View, Text, TouchableOpacity } from "react-native";
 
 const Header = () => {
   return (
@@ -8,12 +8,12 @@ const Header = () => {
         <Text style={{ fontSize: 32, fontWeight: "bold" }}>Hello , devs</Text>
         <Text style={{ fontSize: 12 }}>14 tasks today</Text>
       </View>
-      <View style={styles.profile}>
+      <TouchableOpacity style={styles.profile}>
         <Image
           source={require("../assets/profile.png")}
           style={{ width: 45, height: 45 }}
         />
-      </View>
+      </TouchableOpacity>
     </View>
   );
 };
